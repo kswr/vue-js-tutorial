@@ -1,6 +1,6 @@
 # VueJS Tutorial
 
-## Lessons:
+## Lessons on this branch:
 1. Introduction
 1. The Vue instance
 1. Data & Methods
