@@ -1,0 +1,7 @@
+div#my-canvas {
+    border: 1px solid black;
+    height: 300px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 300px;
+}

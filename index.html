@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VueJS tutorial</title>
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="vue-app">
+    <h1>Lessons 1-4</h1>
+    <h2>{{greet('morning')}}</h2>
+    <p>Name: {{name}}</p>
+    <p>Job: {{job}}</p>
+    <a :href="website">The Net Ninja Website</a>
+    <br>
+    <br>
+    <input type="text" :value="name">
+    <br>
+    <p v-html="websiteTag"></p>
+</div>
+
+<div id="vue-app2">
+    <h1>Lesson 5</h1>
+    <button v-on:click.once="add(1)">Add a year</button>
+    <button v-on:click="subtract(1)">Subtract a year</button>
+    <button v-on:dblclick="add(10)">Add 10 years</button>
+    <button v-on:dblclick="subtract(10)">Subtract 10 years</button>
+    <p>My age is {{ age }}</p>
+    <div id = "my-canvas" v-on:mousemove="updateXY"> {{x}}, {{y}}</div>
+    <a v-on:click.prevent="click" href="http://www.thenetninja.co.uk">The Net Ninja</a>
+</div>
+
+<div id="vue-app3">
+    <h1>Keyboard events</h1>
+    <label>Name:</label>
+    <input type="text" v-model="name">
+    <label>Age:</label>
+    <input type="text" v-model="age">
+    <br>
+    <span>{{name}}</span>
+    <span>{{age}}</span>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
