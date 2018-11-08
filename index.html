@@ -11,15 +11,15 @@
 </head>
 <body>
 <div id="vue-app">
-    <div id="bag"></div>
+    <div id="bag" v-bind:class="{ burst: ended }"></div>
 
-    <div id ="bag-health">
-        <div></div>
+    <div id ="bag-health" >
+        <div v-bind:style="{width: computedWidth}"></div>
     </div>
 
     <div id="controls">
-        <button>Punch</button>
-        <button>Restart</button>
+        <button v-on:click="punch" v-show="!ended">Punch</button>
+        <button v-on:click="restart">Restart</button>
     </div>
 
 </div>
