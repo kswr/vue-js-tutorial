@@ -11,16 +11,6 @@
 </head>
 <body>
 <div id="vue-app">
-    <div id="bag" v-bind:class="{ burst: ended }"></div>
-
-    <div id ="bag-health" >
-        <div v-bind:style="{width: computedWidth}"></div>
-    </div>
-
-    <div id="controls">
-        <button v-on:click="punch" v-show="!ended">Punch</button>
-        <button v-on:click="restart">Restart</button>
-    </div>
 
 </div>
 <script src="app.js"></script>
