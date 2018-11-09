@@ -17,7 +17,7 @@
     },
     methods: {
       changeTitle: function () {
-        this.title = "Vue Wizards"
+        this.$emit('changeTitle', 'Vue Wizards')
       }
     }
   }
