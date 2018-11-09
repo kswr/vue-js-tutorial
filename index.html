@@ -11,9 +11,13 @@
 </head>
 <body>
 
-<h1>Referencing with $ref</h1>
 
-<div id="vue-app-one">
+<div id="vue-app">
+    <h2>Refs</h2>
+    <input type="text" ref="input">
+    <button v-on:click="readRefs">Submit</button>
+    <p>Your fav food: {{output}} </p>
+    <div ref="test"></div>
 </div>
 
 <script src="app.js"></script>
