@@ -1,7 +1,8 @@
 <template xmlns:v-theme="http://www.w3.org/1999/xhtml">
   <div id="show-blogs">
     <h1>All Blog Articles</h1>
-    <div v-for="blog in blogs" class="single-blog">
+    <input id ="search" v-model="search" type="text" placeholder="search blogs"/>
+    <div v-for="blog in filteredBlogs" class="single-blog">
       <h2>{{blog.title | to-uppercase }}</h2>
       <p>{{blog.body | snippet }}</p>
     </div>
@@ -15,6 +16,7 @@
     data () {
       return {
         blogs: [],
+        search: ''
       }
     },
     created() {
@@ -24,6 +26,13 @@
           this.blogs = data.body.slice(0,10);
         }
       )
+    },
+    computed: {
+      filteredBlogs: function () {
+        return this.blogs.filter((blog) => {
+          return blog.title.match(this.search);
+        })
+      }
     }
   }
 </script>
@@ -40,5 +49,11 @@
     margin: 20px 0;
     box-sizing: border-box;
     background: #eee;
+  }
+
+  input {
+    width: 794px;
+    height: 1.2em;
+    font-size: 1em;
   }
 </style>
